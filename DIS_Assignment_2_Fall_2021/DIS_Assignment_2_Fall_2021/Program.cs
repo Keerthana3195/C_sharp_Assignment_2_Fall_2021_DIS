@@ -7,8 +7,8 @@ namespace DIS_Assignment_2_Fall_2021
     {
         static void Main(string[] args)
         {
-            //Question1:
-
+            //Question1:    
+            //sample 123
             Console.WriteLine("Question 1");
             int[] heights = { -5, 1, 5, 0, -7 };
             int max_height = LargestAltitude(heights);
