@@ -7,8 +7,7 @@ namespace DIS_Assignment_2_Fall_2021
     {
         static void Main(string[] args)
         {
-            //Question1:    
-            //sample 123
+            //Question1:
             Console.WriteLine("Question 1");
             int[] heights = { -5, 1, 5, 0, -7 };
             int max_height = LargestAltitude(heights);
@@ -17,7 +16,8 @@ namespace DIS_Assignment_2_Fall_2021
 
             //Question 2:
             Console.WriteLine("Question 2:");
-            int[] nums = { 0, 1, 0, 3, 12 };
+            //int[] nums = { 0, 1, 0, 3, 12 };
+            int[] nums = { 1, 3, 5, 6 };
             Console.WriteLine("Enter the target number:");
             int target = Int32.Parse(Console.ReadLine());
             int pos = SearchInsert(nums, target);
@@ -123,12 +123,27 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return 0;
+                int largest = 0;
+                int starting_height = 0;
+                if(gain.Length >= 1 && gain.Length <= 100)
+                {
+                    for (int i = 0; i < gain.Length; i++)
+                    {
+                        if(gain[i] >= -100 && gain[i] <= 100)
+                        {
+                            starting_height += gain[i];
+                            if (largest < starting_height)
+                            {
+                                largest = starting_height;
+                            }
+                        }                    
+                    }
+                }              
+                return largest;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
                 throw;
             }
         }

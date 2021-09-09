@@ -28,3 +28,19 @@
 /Users/nagababuveganti/Documents/DIS Fall 2021/Assignmnet 2/DIS_Assignment_2_Fall_2021/DIS_Assignment_2_Fall_2021/obj/Debug/net5.0/ref/DIS_Assignment_2_Fall_2021.dll
 /Users/nagababuveganti/Documents/DIS Fall 2021/Assignmnet 2/DIS_Assignment_2_Fall_2021/DIS_Assignment_2_Fall_2021/obj/Debug/net5.0/DIS_Assignment_2_Fall_2021.pdb
 /Users/nagababuveganti/Documents/DIS Fall 2021/Assignmnet 2/DIS_Assignment_2_Fall_2021/DIS_Assignment_2_Fall_2021/obj/Debug/net5.0/DIS_Assignment_2_Fall_2021.genruntimeconfig.cache
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.exe
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.deps.json
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.runtimeconfig.json
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.runtimeconfig.dev.json
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.dll
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\ref\DIS_Assignment_2_Fall_2021.dll
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\bin\Debug\net5.0\DIS_Assignment_2_Fall_2021.pdb
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.csproj.AssemblyReference.cache
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.GeneratedMSBuildEditorConfig.editorconfig
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.AssemblyInfoInputs.cache
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.AssemblyInfo.cs
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.csproj.CoreCompileInputs.cache
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.dll
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\ref\DIS_Assignment_2_Fall_2021.dll
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.pdb
+D:\software\Visual Studio 2019\source\repo\Assignment_2_Fall_2021_DIS\DIS_Assignment_2_Fall_2021\DIS_Assignment_2_Fall_2021\obj\Debug\net5.0\DIS_Assignment_2_Fall_2021.genruntimeconfig.cache
