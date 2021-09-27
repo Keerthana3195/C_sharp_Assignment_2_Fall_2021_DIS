@@ -130,6 +130,7 @@ namespace DIS_Assignment_2_Fall_2021
                 int starting_height = 0;
                 if (gain.Length >= 1 && gain.Length <= 100)
                 {
+                    // iterating over the gain input array
                     for (int i = 0; i < gain.Length; i++)
                     {
                         if (gain[i] >= -100 && gain[i] <= 100)
@@ -137,6 +138,7 @@ namespace DIS_Assignment_2_Fall_2021
                             starting_height += gain[i];
                             if (largest < starting_height)
                             {
+                                // changing value of largest if it is less than starting_height
                                 largest = starting_height;
                             }
                         }
@@ -182,6 +184,8 @@ namespace DIS_Assignment_2_Fall_2021
                 {
                     if (nums[i] == target)
                     {
+                        // assigning value of current index to the index variable if value in nums at that index = target
+                        // once the index is assigned, we break the loop 
                         index = i;
                         break;
                     }
@@ -232,7 +236,6 @@ namespace DIS_Assignment_2_Fall_2021
 
                 //find the shortest word from input array of words
                 string shortest = words[0];
-                string largest = words[0];
                 foreach (string word in words)
                 {
                     int n = word.Length;
@@ -242,6 +245,7 @@ namespace DIS_Assignment_2_Fall_2021
                     }
                 }
 
+                // iterating over each character of the shortest word, words array and each word
                 var common_letters = new List<string>();
                 for (int i = 0; i < shortest.Length; i++)
                 {
