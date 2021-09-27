@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DIS_Assignment_2_Fall_2021
 {
@@ -26,7 +27,7 @@ namespace DIS_Assignment_2_Fall_2021
 
             //Question3:
             Console.WriteLine("Question 3");
-            string[] words1 = { "bella", "label", "roller" };
+            string[] words1 = { "cool", "lock", "cook" };
             List<string> commonWords = CommonChars(words1);
             Console.WriteLine("Common characters in all the strigs are:");
             for (int i = 0; i < commonWords.Count; i++)
@@ -37,7 +38,7 @@ namespace DIS_Assignment_2_Fall_2021
 
             //Question 4:
             Console.WriteLine("Question 4");
-            int[] arr1 = { 1, 2, 2, 1, 1, 3 };
+            int[] arr1 = { 1, 2, 2, 1, 1, 3, 3 };
             bool unq = UniqueOccurrences(arr1);
             if (unq)
                 Console.WriteLine("Number of Occurences of each element are same");
@@ -53,8 +54,8 @@ namespace DIS_Assignment_2_Fall_2021
             items.Add(new List<string>() { "computer", "silver", "lenovo" });
             items.Add(new List<string>() { "phone", "gold", "iphone" });
 
-            string ruleKey = "color";
-            string ruleValue = "silver";
+            string ruleKey = "type";
+            string ruleValue = "phone";
 
             int matches = CountMatches(items, ruleKey, ruleValue);
             Console.WriteLine("Number of matches for the given rule :{0}", matches);
@@ -71,8 +72,8 @@ namespace DIS_Assignment_2_Fall_2021
             //Question 7:
 
             Console.WriteLine("Question 7:");
-            string allowed = "ab";
-            string[] words = { "ad", "bd", "aaab", "baa", "badab" };
+            string allowed = "cad";
+            string[] words = { "cc", "acd", "b", "ba", "bac", "bad", "ac", "d" };
             int count = CountConsistentStrings(allowed, words);
             Console.WriteLine("Number of Consistent strings are : {0}", count);
             Console.WriteLine(" ");
@@ -110,8 +111,10 @@ namespace DIS_Assignment_2_Fall_2021
         /*
         Question 1:
 
-        There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
-        You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i and i + 1  for all (0 <= i < n). Return the highest altitude of a point.
+        There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. 
+        The biker starts his trip on point 0 with altitude equal 0.
+        You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i and i + 1  
+        for all (0 <= i < n). Return the highest altitude of a point.
         Example 1:
         Input: gain = [-5,1,5,0,-7]
         Output: 1
@@ -125,20 +128,20 @@ namespace DIS_Assignment_2_Fall_2021
             {
                 int largest = 0;
                 int starting_height = 0;
-                if(gain.Length >= 1 && gain.Length <= 100)
+                if (gain.Length >= 1 && gain.Length <= 100)
                 {
                     for (int i = 0; i < gain.Length; i++)
                     {
-                        if(gain[i] >= -100 && gain[i] <= 100)
+                        if (gain[i] >= -100 && gain[i] <= 100)
                         {
                             starting_height += gain[i];
                             if (largest < starting_height)
                             {
                                 largest = starting_height;
                             }
-                        }                    
+                        }
                     }
-                }              
+                }
                 return largest;
             }
             catch (Exception e)
@@ -174,8 +177,30 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //Write your Code here.
-                return -1;
+                int index = 0;
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    if (nums[i] == target)
+                    {
+                        index = i;
+                        break;
+                    }
+                    else
+                    {
+                        if (nums[i] > target)
+                        {
+                            index = i;
+                            break;
+                        }
+                        else
+                        {
+                            index = nums.Length;
+                        }
+
+                    }
+                }
+                return index;
+
             }
             catch (Exception)
             {
@@ -204,9 +229,43 @@ namespace DIS_Assignment_2_Fall_2021
             try
             {
                 List<string> commonwords = new List<string>();
-                //write your code here.
 
-                return commonwords;
+                //find the shortest word from input array of words
+                string shortest = words[0];
+                string largest = words[0];
+                foreach (string word in words)
+                {
+                    int n = word.Length;
+                    if (n < shortest.Length)
+                    {
+                        shortest = word;
+                    }
+                }
+
+                var common_letters = new List<string>();
+                for (int i = 0; i < shortest.Length; i++)
+                {
+                    int count = 0;
+                    for (int k = 0; k < words.Length; k++)
+                    {
+                        for (int j = 0; j < words[k].Length; j++)
+                        {
+                            if (words[k][j] == shortest[i])
+                            {
+                                count += 1;
+                                words[k] = words[k].Remove(j, 1);
+                                break;
+
+                            }
+                        }
+                    }
+
+                    if (count == words.Length)
+                    {
+                        common_letters.Add(shortest[i].ToString());
+                    }
+                }
+                return common_letters;
             }
             catch (Exception)
             {
@@ -236,12 +295,20 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return false;
+                if (arr.Length == 1)
+                    return true;
+                var unique_dict = new Dictionary<int, int>();
+                foreach (var element in arr)
+                {
+                    if (unique_dict.ContainsKey(element))
+                        unique_dict[element]++;
+                    else
+                        unique_dict.Add(element, 1);
+                }
+                return !unique_dict.GroupBy(x => x.Value).Any(x => x.Count() > 1);
             }
             catch (Exception)
             {
-
                 throw;
             }
 
@@ -277,8 +344,37 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return 0;
+                int count = 0;
+                for (int i = 0; i < items.Count; i++)
+                {
+                    string type = items[i][0];
+                    string color = items[i][1];
+                    string name = items[i][2];
+
+                    if (ruleKey == "type")
+                    {
+                        if (ruleValue == type)
+                        {
+                            count++;
+                        }
+                    }
+                    if (ruleKey == "color")
+                    {
+                        if (ruleValue == color)
+                        {
+                            count++;
+                        }
+                    }
+                    if (ruleKey == "name")
+                    {
+                        if (ruleValue == name)
+                        {
+                            count++;
+                        }
+                    }
+                }
+
+                return count;
             }
             catch (Exception)
             {
@@ -319,9 +415,28 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                //print the answer in the function itself.
+                var i = 0;
+                var j = nums.Length - 1;
+                int[] output = new int[2];
+                while (i < j)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        output[0] = i + 1;
+                        output[1] = j + 1;
+                    }
 
+
+                    if (nums[i] + nums[j] < target)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        j--;
+                    }
+                }
+                Console.Write("[" + String.Join(",", output) + "]");
             }
             catch (Exception)
             {
@@ -356,8 +471,25 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return 0;
+                int count_consistent = 0;
+                foreach (string word in words)
+                {
+                    int count = 0;
+                    var word_list = new List<char>(word);
+                    for (int i = 0; i < word_list.Count; i++)
+                    {
+                        if (allowed.Contains(word_list[i]))
+                        {
+                            count++;
+                        }
+                    }
+
+                    if (count == word_list.Count)
+                    {
+                        count_consistent++;
+                    }
+                }
+                return count_consistent;
             }
             catch (Exception)
             {
@@ -386,9 +518,12 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                int[] ans = { };
-                return ans;
+                int[] output = new int[nums1.Length];
+                for (int i = 0; i < nums1.Length; i++)
+                {
+                    output[i] = Array.IndexOf(nums2, nums1[i]);
+                }
+                return output;
             }
             catch (Exception)
             {
@@ -417,8 +552,22 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return 0;
+                int sum = 0;
+                int maximum_sum = arr[0];
+
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                    if (arr[i] > sum)
+                    {
+                        sum = arr[i];
+                    }
+                    if (sum > maximum_sum)
+                    {
+                        maximum_sum = sum;
+                    }
+                }
+                return maximum_sum;
             }
             catch (Exception)
             {
@@ -454,8 +603,23 @@ namespace DIS_Assignment_2_Fall_2021
         {
             try
             {
-                //write your code here.
-                return 0;
+                var value_1 = 0;
+                var value_2 = 0;
+                var sum = 0;
+                var minimum = int.MaxValue;
+                while (value_2 < arr10.Length)
+                {
+                    sum += arr10[value_2];
+
+                    while (sum >= target_subarray_sum)
+                    {
+                        minimum = Math.Min(minimum, value_2 + 1 - value_1);
+                        sum -= arr10[value_1++];
+                    }
+
+                    value_2++;
+                }
+                return minimum == int.MaxValue ? 0 : minimum;
 
             }
             catch (Exception)
